@@ -18,7 +18,7 @@ while (condition) {
             name: "functions",
             type: "list",
             message: chalk.inverse("Select"),
-            choices: ["wordsCounting", "letterCounting",]
+            choices: ["wordsCounting", "letterCounting", "sentenceCounting"]
         }
     ]);
     if (answer.sentence == "") {
@@ -36,6 +36,12 @@ while (condition) {
                 let filter = letter.filter(item => item.trim() !== "");
                 console.log(filter);
                 console.log(chalk.bold.hex('#62FF00')(`\tYour Sentence Letter Count is : ${filter.length}`));
+                break;
+            case "sentenceCounting":
+                const sentence = answer.sentence.trim().split(".");
+                console.log(sentence);
+                (sentence);
+                console.log(sentence.length);
                 break;
             default:
                 "Select Function";
