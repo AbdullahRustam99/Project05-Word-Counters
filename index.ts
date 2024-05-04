@@ -31,19 +31,18 @@ while (condition) {
 			case "wordsCounting":
 				const words = answer.sentence.trim().split(' ')
 				console.log(words);
-				console.log(chalk.bold.hex('#62FF00')(`\tYour Sentence Word Count is : ${words.length}`));
+				console.log(chalk.bold.hex('#62FF00')(`\tYour Word Count is : ${words.length}`));
 				break;
 			case "letterCounting":
 				const letter = answer.sentence.trim().split('')
 				let filter = letter.filter(item => item.trim() !== "")
 				console.log(filter);
-				console.log(chalk.bold.hex('#62FF00')(`\tYour Sentence Letter Count is : ${filter.length}`));
+				console.log(chalk.bold.hex('#62FF00')(`\tYour Letter Count is : ${filter.length}`));
 				break;
 			case "sentenceCounting":
 				const sentence = answer.sentence.trim().split(".");
 				console.log(sentence);
-				(sentence)
-				console.log(sentence.length);
+				console.log(chalk.bold.hex('#62FF00')(`\tYour Sentence Count is : ${sentence.length}`));
 				break;
 			default:
 				"Select Function";
@@ -57,4 +56,11 @@ while (condition) {
 
 	})
 	condition = user.quit
+	if(condition == false){
+		console.log(chalk
+			.bold(`\n$$$$$$$$$$$$$$$$$$$$$$$$$`));
+		console.log(chalk.bold(`\tGood By!`));
+		console.log(chalk.bold(`$$$$$$$$$$$$$$$$$$$$$$$$$`));
+		
+	}
 }
